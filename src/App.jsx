@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Navigation from './components/Navigation'
 import Contents from './components/Contents'
 import {myStore} from './ContextAP'
-import Cards from "./components/cards";
+import Cards from "./components/Cards";
 import Cart from "./components/Cart";
 
 
