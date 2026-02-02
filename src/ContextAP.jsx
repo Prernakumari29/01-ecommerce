@@ -11,7 +11,9 @@ export let ContextProvider = ({children}) =>{
     JSON.parse(localStorage.getItem("products")) || []
   );
 
-  const [cart , setCart] = useState([])
+  const [cart , setCart] = useState(
+    JSON.parse(localStorage.getItem("cart")) || []
+  )
   const [showCart , setShowCart] = useState(false) 
 
   const [currentView, setCurrentView] = useState("products");

@@ -6,7 +6,11 @@ const Cards = () => {
 let { card,cart, setCart} = useContext(myStore)
 
 const addToCart=(product)=>{
-    setCart(prev => [...prev ,product])
+    setCart(prev => {
+        const updatedArr =[...prev ,product]
+        localStorage.setItem("cart" , JSON.stringify(updatedArr))
+        return updatedArr;
+    })
     console.log("added")
     alert("items added into cart")
 }
